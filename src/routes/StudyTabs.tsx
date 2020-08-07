@@ -34,7 +34,7 @@ function StudyTabs() {
         inactiveBackgroundColor: '#fafafc',
         activeBackgroundColor: '#ebebf5',
         inactiveTintColor: '#c1bccc',
-        activeTintColor: '#701f45'
+        activeTintColor: '#9e1d59'
       }}
     >
       <Screen 
@@ -42,9 +42,9 @@ function StudyTabs() {
         component={TeacherList} 
         options={{
           tabBarLabel: 'Teachers',
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ color, size, focused }) => {
             return (
-              <Ionicons name="ios-easel" size={size} color={color} />
+              <Ionicons name="ios-easel" size={size} color={focused? '#e55792' : color} />
             );
           }
         }}
@@ -54,9 +54,9 @@ function StudyTabs() {
         component={Favorites} 
         options={{
           tabBarLabel: 'Faves',
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ color, size, focused }) => {
             return (
-              <Ionicons name="ios-heart" size={size} color={color} />
+              <Ionicons name="ios-heart" size={size} color={focused? '#e55792' : color} />
             );
           }
         }}
